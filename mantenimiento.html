@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mantenimiento | E.Y.E.webs</title>
+		<link rel="icon" type="image/png" href="img/eyewebsLogoFavicon.png"/>
+		<link rel="stylesheet" href="css/eyewebstyle.css" type="text/css"/>
+		<!-- HTML meta refresh URL redirection -->
+		<!--<meta http-equiv="refresh" content="10; url=/"/>-->
+		<style>
+			video {
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<!--encabezado-->
+			<header>
+				<nav role="navigation">
+					<div id="menuToggle">
+						<!--
+						A fake / hidden checkbox is used as click reciever,
+						so you can use the :checked selector on it.
+						-->
+						<input type="checkbox" />
+						
+						<!--
+						Some spans to act as a hamburger.
+						
+						They are acting like a real hamburger,
+						not that McDonalds stuff.
+						-->
+						<span></span>
+						<span></span>
+						<span></span>
+						
+						<!--
+						Too bad the menu has to be inside of the button
+						but hey, it's pure CSS magic.
+						-->
+						<ul id="menu">
+							<a href="."><li class="active">▻ Inicio</li></a>
+							<a href="EYEnews/content"><li>⌲ El Comparador</li></a>
+							<!--<a href="#"><li></li></a>
+							<a href="#"><li></li></a>-->
+						</ul>
+					</div>
+					<div class="logoTitulo">
+						<!--<a href="#"><img type="png" class="logo" src="img/eyewebsLogoTransparente.png" alt="eyewebsLogo"/></a>-->
+						<p id="titulo"><b>E.Y.E.webs</b></p>
+					</div>
+				</nav>
+			</header>
+			<!--fin encabezado-->
+			<!--contenido de pagina de pagina-->
+			<div class="contentb">
+				<div class="mantenimiento">
+					<p>
+						<span><b>Página en mantenimiento</b></span><br/>
+						<span>Disculpen las molestias!</span>
+					</p>
+					<video  height="200" autoplay muted loop>
+						<source src="video\mantenimiento.mp4" type="video/mp4">
+					</video>
+				</div>
+				<p class="printPageButton"><button  onclick="window.print();"> Imprimir 🖨️ página 📝 </button></p>
+			</div>
+			<!--fin contenido de pagina de pagina-->
+			<!--pie de pagina-->
+			<footer>
+				<p>© 2023 | designed by: E.Y.E.</p>
+			</footer>
+			<!--fin pie de pagina-->
+		</div>
+	</body>
+</html>
