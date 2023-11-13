@@ -250,6 +250,20 @@ div#seccionPrincipal p {
     text-align: center;
 }
 
+div#seccionProductos { 
+    background-color:#DCDCDC;
+    margin: 0 auto;
+    padding: 25px;
+    width: fit-content;
+}
+
+div#seccionProductos p { 
+    background-color:#d6d2d2;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+}
+
 table.productos, thead th, tbody th, tbody td , tfoot th, tfoot td {
     border: 1px solid;
     border-collapse: collapse;
@@ -258,6 +272,17 @@ table.productos, thead th, tbody th, tbody td , tfoot th, tfoot td {
     padding: 7px;
 }
 
+#imgdispositivo {
+    width: 174px;
+    max-width: 80%;
+}
+#imgdispositivo2 {
+    height:100px; 
+    width:100px;
+}
+#imglogo {
+    width:100px;
+}
 
 /* pie de pagina */
 footer {
