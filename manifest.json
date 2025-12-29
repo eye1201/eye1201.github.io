@@ -1,0 +1,16 @@
+{
+    "short_name": "EYEwebs",
+    "name": "EYEwebs",
+    "description": "Los mejores dispositivos solo en EYEwebs, designed by E.Y.E.",
+    "icons": [
+      {
+        "src": "/img/eyewebsLogoFavicon.png",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "./index.html",g
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "lang": "es"
+  }
