@@ -1,11 +1,13 @@
 {
     "short_name": "EYEwebs",
-    "name": "EYEwebs",
+    "name": "EYEwebs - Dispositivos de Vanguardia",
     "description": "Los mejores dispositivos solo en EYEwebs, designed by E.Y.E.",
     "icons": [
       {
         "src": "/img/eyewebsLogoFavicon.png",
-        "type": "image/png"
+        "type": "image/png",
+        "sizes": "660x600",
+        "purpose": "any"
       }
     ],
     "start_url": "./index.html",
