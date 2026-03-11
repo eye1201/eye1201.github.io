@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Info | EYEnews</title>
+		<link rel="icon" type="image/png" href="../img/eyenewslogo.png"/>
+		<link rel="stylesheet" href="../css/news-style.css" type="text/css"/>
+		<link rel="stylesheet" href="../css/eyewebstyle.css" type="text/css"/>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<!--encabezado-->
+		<!--
+			<header>
+			<table>
+				<tr>
+					<td>
+						<a href="../index.html"><img type="png" class="logo" src="../img/eyenewslogo.png" alt="eyenewslogo"/></a>
+					</td>
+					<td>
+						<ul class="navbar">
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../html/noticias.html">Noticias</a></li>
+							<li><a href="../html/noticias-tecnologicas.html">Noticias Tecnologicas</a></li>
+							<li hidden ><a href="../html/"></a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</header>
+		-->
+		<!--fin encabezado-->
+		<!--contenido de pagina de pagina-->
+		<h1 id="titulo">Info</h1>
+		<p class="printPageButton"><button  onclick="alert('Pulsa en aceptar para proceder a imprimir la página.');window.print();"> Imprimir 🖨️ página 📝 </button></p>
+		<div id="noticiario">
+			<div id="indice">
+				<div class="summary">
+					<details>
+						<summary>
+							<b style="text-decoration: underline; text-decoration-style: solid;">Última actualización: 24/11/2021</b>
+						</summary>
+						<div class="detalle">
+							<p>Las ultimas noticias aparecen arriba del todo.</p>
+							<p>
+								<span>Se van añadiendo noticias lo antes posible.</span><br/>					
+							</p>
+						</div>
+					</details>
+				</div>
+			</div>
+			<hr class="bloques"/>
+			<div id="bloque">
+				<ol>
+					<p hidden >No hay noticias publicadas en este momento.</p>
+					<li>
+						<div id="noticia_2021-11-23">
+							<h1>4 de diciembre de 2021</h1>
+							<div>
+								<p>Video adjunto de un llamamiento a la población</p>
+								<video width="480" height="270" controls>
+									<source src="../video/video_2021-11-23_19-59-48.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</div>
+							<hr/>
+							<div id="fuentes">
+								<details>
+									<summary>
+										<b>Fuente(s):</b>
+									</summary>
+									<p><a href="https://t.me/InfoVacunas/3795" target="_blank">URL-FUENTE</a></p>
+									<p><a href="#tarea1" onclick="alert('Archivo no disponible')">¯\_(ツ)_/¯</a></p>
+								</details>
+							</div>
+						</div>
+						<hr style="border: 2px dashed"/>
+					</li>
+					<li hidden>
+						<div id="noticia_YYYY-MM-DD">
+							<h1>Titulo-Noticia-1</h1>
+							<div>
+								<p>texto o más</p>
+							</div>
+							<hr/>
+							<div class="fuente">
+								<p><b>Fuente(s):</b></p>
+								<p><a href="#titulo" target="_blank">URL-FUENTE</a></p>
+							</div>
+						</div>
+						<hr style="border: 2px dashed"/>
+					</li>
+				</ol>
+		   </div>
+		</div>
+		<!--fin contenido de pagina de pagina-->
+		<!--pie de pagina-->
+		<footer>
+			<p>EYEnews	&nbsp;</p>
+			<p>© Copyright 2021 | designed by: E.Y.E.</p>
+		</footer>
+		<!--fin pie de pagina-->
+	</body>
+</html>
