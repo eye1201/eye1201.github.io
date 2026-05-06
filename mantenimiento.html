@@ -25,7 +25,7 @@
 						A fake / hidden checkbox is used as click reciever,
 						so you can use the :checked selector on it.
 						-->
-						<input type="checkbox" />
+						<input type="null" />
 						
 						<!--
 						Some spans to act as a hamburger.
@@ -42,14 +42,16 @@
 						but hey, it's pure CSS magic.
 						-->
 						<ul id="menu">
-							<!--<a href=""><li>▻ Inicio</li></a>
-							<a href="/EYEnews/content"><li>⌲ El Comparador</li></a>
+							<!--
+							<a href=""><li>▻ Inicio</li></a>
 							<a href="#"><li></li></a>
-							<a href="#"><li></li></a>-->
+							<a href="#"><li></li></a>
+							<a href="#"><li></li></a>
+							-->
 						</ul>
 					</div><br/>
 					<div class="logoTitulo">
-						<!--<a href="#"><img type="png" class="logo" src="img/eyewebsLogoTransparente.png" alt="eyewebsLogo"/></a>-->
+						<img type="png" id="imglogo" onclick="window.open('#', '_self')" style="display: block; margin-left: auto; margin-right: auto; width: 7%;" src="img/eyewebsLogoTransparente.png" alt="EYE webs Logo"/>
 						<p id="titulo"><b>E.Y.E.webs</b></p>
 					</div>
 				</nav>
@@ -72,6 +74,9 @@
 			<!--pie de pagina-->
 			<footer>
 				<p>© 2023-2026 | designed by: E.Y.E.</p>
+				
+				<!-- El botón de subir suele ir al final para que cargue lo último -->
+				<a href='#' class="stt" title="Subir arriba"></a>
 			</footer>
 			<!--fin pie de pagina-->
 		</div>

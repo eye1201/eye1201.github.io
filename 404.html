@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Error 404 | E.Y.E.webs</title>
 		<link rel="icon" type="image/png" href="/img/eyewebsLogoFavicon.png"/>
-		<link rel="stylesheet" href="/css/eyewebstyle.css" type="text/css"/>
+		<link rel="stylesheet" href="css/eyewebstyle.css" type="text/css"/>
 		<!-- HTML meta refresh URL redirection -->
-		<meta http-equiv="refresh" content="10; url=/"/>
+		<meta http-equiv="refresh" content="10; url=/"/>		
 	</head>
 	<body>
 		<div class="content">
@@ -38,12 +38,14 @@
 						<ul id="menu">
 							<a href="/"><li>▻ Inicio</li></a>
 							<a href="/EYEnews/content"><li>⌲ El Comparador</li></a>
-							<!--<a href="#"><li></li></a>
-							<a href="#"><li></li></a>-->
+							<!--
+							<a href="#"><li></li></a>
+							<a href="#"><li></li></a>
+							-->
 						</ul>
 					</div><br/>
 					<div class="logoTitulo">
-						<!--<a href="#"><img type="png" class="logo" src="img/eyewebsLogoTransparente.png" alt="eyewebsLogo"/></a>-->
+						<img type="png" id="imglogo" onclick="window.open('#', '_self')" style="display: block; margin-left: auto; margin-right: auto; width: 7%;" src="img/eyewebsLogoTransparente.png" alt="EYE webs Logo"/>
 						<p id="titulo"><b>E.Y.E.webs</b></p>
 					</div>
 				</nav>
@@ -51,8 +53,8 @@
 			<!--fin encabezado-->
 			<!--contenido de pagina de pagina-->
 			<div class="contentb">
-				<div id="seccionPrincipal">
-					<h1 >Error 404</h1>
+				<div id="">
+					<h1 style="text-align: center;">Error 404</h1>
 					<p id="texto">
 						<span>¿Te has perdido?</span><br/>
 						<span>La página que estabas buscando no se encuentra, puede que se haya eliminado.</span>
@@ -62,7 +64,6 @@
 						<span>Espera un momento...</span>
 					</p>
 				</div>
-				<p hidden class="printPageButton"><button  onclick="window.print();"> Imprimir 🖨️ página 📝 </button></p>
 			</div>
 			<!--fin contenido de pagina de pagina-->
 			<!--pie de pagina-->
