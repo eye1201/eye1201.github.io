@@ -1,7 +1,6 @@
-/* 
-   DISEÑO WEB E.Y.E. 
-   Basado en el diseño de Erik Terwan (Menu Hamburguesa)
-   Actualizado: 06/05/2026 16:41h
+/* Diseño web: E.Y.E. 
+   Menu Hamburguesa basado en el diseño de Erik Terwan
+   Actualizado: 25/05/2026 02:52h
 */
 
 * {
@@ -25,14 +24,83 @@ html, body {
     -webkit-overflow-scrolling: touch; /* Hace que el scroll sea suave en iPhone */
 }
 
+/* --- ESTRUCTURA DE CONTENEDORES --- */
+
+div.content {
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.contentb {
+    margin: 0 auto;
+    max-width: 90%;
+    display: block;
+}
+
+/* Unifica el comportamiento de todos los contenedores principales */
+.contentb, #seccionProductos, #indice {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+
+nav[role="navigation"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+}
+
+.logoTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Zona segura: Resta el espacio del botón hamburguesa para evitar choques */
+    max-width: calc(100% - 140px); 
+    margin: 0 auto;
+}
+
+#titulo {
+    font-size: 2rem; /* Uso de rem para mejor escalado responsivo */
+    text-align: center;
+    margin: 15px 0 20px 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.logoTitulo img { 
+    width: 100px; /*Tamaño fijo pero seguro */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s;
+}
+
+.logoTitulo img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+    .logoTitulo img {
+        width: 200px; 
+    }
+}
+
 /* --- MENÚ HAMBURGUESA (Erik Terwan) --- */
 
 #menuToggle {
     display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-    z-index: 1;
+    position: fixed;
+    top: 30px; /* Subido ligeramente para alinear mejor */
+    left: 30px; /* Ajustado al borde para dar más espacio al título */
+    z-index: 1000; /* Aumentado para evitar que quede detrás de imágenes */
     -webkit-user-select: none;
     user-select: none;
 }
@@ -61,7 +129,7 @@ html, body {
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 1002;
     -webkit-touch-callout: none;
 }
 
@@ -107,8 +175,7 @@ html, body {
     position: fixed;
     width: 300px;
     margin: 0;
-    padding: 50px;
-    padding-top: 125px;
+    padding: 125px 50px 50px 50px; /* Espaciado corregido */
     left: -400px; /* Ajustado para esconderlo bien */
     top: 0;
     height: 100vh;
@@ -118,6 +185,7 @@ html, body {
     transform-origin: 0% 0%;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Permite desplazamiento interno si el menú es muy largo */
 }
 
 #menu li {
@@ -129,100 +197,11 @@ html, body {
     transform: translateX(400px);
 }
 
-/* * decoración texto * */
-
-
-/* --- TÍTULOS Y DECORACIÓN --- */
-
-#titulo {
-    font-size: 225%;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.logoTitulo img {
-    transition: transform 0.3s;
-    
-}
-
-.logoTitulo img:hover {
-    transform: scale(1.05);
-}
+/* --- TABLAS Y SECCIÓN DE PRODUCTOS --- */
 
 tr[id] {
     scroll-margin-top: 100px; /* Ajusta según el tamaño de tu cabecera */
 }
-
-
-/* --- ESTRUCTURA UNIFICADA DE CONTENEDORES --- */
-
-/* Contenedor raíz que evita el desbordamiento lateral */
-div.content {
-    max-width: 100%;
-    width: 95%; /* Margen de seguridad para móviles */
-    margin: 0 auto;
-    position: relative;
-    overflow-x: hidden; /* Garantía antipánico contra scroll lateral */
-}
-
-/* Alineación maestra para todos los bloques de contenido */
-#indice, 
-#seccionProductos, 
-#dispositivos,
-.productos {
-    max-width: 900px; /* Ancho máximo común para todos */
-    width: 100%;      /* Se adapta al ancho de div.content en móviles */
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box; /* Crucial para que el padding no sume ancho */
-}
-
-
-/* --- GLOSARIO E ÍNDICE --- */
-#indice {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#indice .summary {
-    background-color: #E6E6FA;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    cursor: pointer;
-    width: 100%; /* Forzamos a que use el 100% de su contenedor master de 900px */
-    box-sizing: border-box;
-    border-radius: 5px; 
-    transition: background 0.3s;
-}
-
-.detalle {
-    background-color: #c5c5d8;
-    padding: 15px;
-    border-radius: 0 0 5px 5px;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-
-div#seccionProductos { 
-    background-color: #DCDCDC;
-    padding: 20px;
-    border-radius: 8px;
-    /* Eliminado width: fit-content para mantener alineación */
-    width: 100%; 
-    box-sizing: border-box;
-}
-
-div#seccionProductos p { 
-    background-color:#d6d2d2;
-    margin: 0 auto;
-    padding: 25px;
-    text-align: center;
-}
-
-/* --- TABLAS Y SECCIÓN DE PRODUCTOS (Ajuste Automático) --- */
 
 .productos {
     background-color: #DCDCDC;
@@ -246,12 +225,14 @@ div#seccionProductos p {
 }
 
 table.productos {
-    width: 100%; /* La tabla siempre llenará el carril de 900px */
+    width: 100%;
     border-collapse: collapse;
     background-color: #d6d2d2;
-    table-layout: auto; /* Permite que el navegador ajuste columnas pero dentro del ancho */
+    margin: 0 auto;
+    /* Eliminado min-width: 650px para permitir el autoajuste */
+    /* Define un ancho mínimo para que los datos no se amontonen
+    min-width: 650px; */
 }
-
 
 table.productos th, table.productos td {
     border: 1px solid #999;
@@ -266,41 +247,33 @@ table.productos th, table.productos td {
     vertical-align: top;
 }
 
-/* --- RESPONSIVIDAD: Transformar tabla en bloques verticales --- */
-@media screen and (max-width: 768px) {
-    /* Convertimos cada elemento de la tabla en un bloque independiente */
-    table.productos, 
-    .productos thead, 
-    .productos tbody, 
-    .productos tr, 
-    .productos th, 
-    .productos td {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Ocultamos los encabezados de la tabla para que no estorben en móvil */
-    .productos thead tr {
-        display: none;
-    }
-
-    .productos tr {
-        margin-bottom: 15px; /* Espacio entre cada producto */
-        border: 2px solid #999;
-    }
-
-    .productos th {
-        border-bottom: 1px dashed #d6d2d2;
-        padding: 15px;
-    }
-
-    .productos td {
-        padding: 15px;
-        background-color: #d6d2d2; /* Color diferente para distinguir precios de specs */
-    }
+/* Fila separadora de MARCA (Ej: SAMSUNG, GOOGLE) */
+.fila-marca {
+    background-color: #444 !important;
+    color: #fff !important;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+.fila-marca th {
+    padding: 10px 20px !important;
+    border: none !important;
+}
+
+/* Títulos de GAMA (Alta / Media) */
+h5.titulo-gama {
+    background-color: #222;
+    color: #ffd700; /* Dorado para resaltar la sección */
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    border-radius: 5px 5px 0 0;
+    text-transform: uppercase;
+}
+
+/* --- IMÁGENES DE PRODUCTO --- */
 
 #imgdispositivo {
     width: 100%; /* Tamaño fijo controlado. No permite que la imagen sea más ancha que la columna */
@@ -327,20 +300,50 @@ table.productos th, table.productos td {
     */
 }
 
-#imglogo {
-    width: 100px; /* Tamaño fijo pero seguro */
-    height: auto;
-    display: block; margin-left: auto; margin-right: auto;
+/* --- GLOSARIO E ÍNDICE (Details/Summary) --- */
+
+/* 1. Contenedor principal: El que manda el ancho y centra todo */
+#indice {
+    width: 95%; 
+    max-width: 95%; /* Sincronizado con table.productos */
+    margin: 20px auto; 
+    box-sizing: border-box;
 }
 
-@media screen and (min-width: 768px) {
-    #imglogo {
-        width: 200px; /* Un poco más grande en PC */
-    }
+/* 2. El encabezado (botón de pulsar) */
+#indice .summary {
+    background-color: #E6E6FA;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    /* Por defecto, redondeado completo si está cerrado */
+    border-radius: 5px; 
+    transition: background 0.3s;
 }
 
+/* 3. El contenido desplegable */
+.detalle {
+    background-color: #c5c5d8;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ajuste para que el texto no toque los bordes */
+    line-height: 1.5;
+}
+
+/* 4. TRUCO PRO: Cambiar bordes solo cuando está abierto */
+details[open] summary {
+    border-radius: 5px 5px 0 0 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 
 /* --- ENLACES --- */
+
 div.content a {
     color: #0044cc;
     text-decoration: none;
@@ -360,7 +363,9 @@ div.content a:hover {
 }
 
 .printPageButton button {
-    /* padding: 8px 15px; */
+    padding: 8px 15px; /*  Le añade separacion en el boton y lo hace más grande sobretodo para móviles */
+    margin: 10px 20px; /* El segundo valor (20px) añade espacio a la derecha e izquierda */
+    /* margin-right: 10px; /* Esto empuja el botón hacia adentro desde la derecha */
     cursor: pointer;
     background: #ccc;
     color: #333;
@@ -368,32 +373,7 @@ div.content a:hover {
     border-radius: 4px;
 }
 
-@media print {
-    .printPageButton, #menuToggle, .stt {
-        display: none !important;
-    }
-}
-
-
-
-/* --- PIE DE PÁGINA --- */
-footer {
-    bottom:0%;
-    padding: 30px 0;
-    text-align: center;
-    font-size: 14px;
-    color: #000000;
-    border-top: 1px solid #ccc;
-    margin-top: 50px;
-}
-
-/** scroll to top button **/
-:root {
-    scroll-behavior: smooth;
-}
-
 /* --- BOTÓN SCROLL TO TOP --- */
-
 .stt {
     position: fixed;
     right: 1.5rem;
@@ -401,15 +381,30 @@ footer {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background: #ededed url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    /* Definimos el color de fondo base */
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23333333' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: 50%;
-    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2);
-    opacity: 0.7;
+    /* Sombra más suave */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    opacity: 0.9;
     z-index: 100;
-    transition: opacity 0.3s; /* Añadido para que el cambio de brillo sea suave */
+    cursor: pointer;
+    /* Transición con curva personalizada para mayor fluidez */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
 }
 
 .stt:hover { 
+    /* Cambiamos a un tono azulado/gris clarito al pasar el ratón */
+    background-color: #f0f0f0;
+    /* El botón sube ligeramente y se hace más grande */
+    transform: translateY(-8px) scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     opacity: 1; /* Sube a opacidad total al pasar el ratón */
 }
 
@@ -418,80 +413,22 @@ footer {
 }
 
 .stt:active {
+     /* Efecto de hundimiento al hacer click */
+    transform: translateY(0) scale(0.95);
+    background-color: #e0e0e0;
     opacity: 0.8; /* Se oscurece ligeramente al pulsar para dar sensación de botón físico */
 }
 
-/* --- REDISEÑO PÁGINA DE INICIO (index.html) --- */
+/* --- PIE DE PÁGINA --- */
 
-#dispositivos {
-    max-width: 900px;
-    width: 95%;
-    margin: 30px auto;
-    border-collapse: collapse;
-    display: block; /* Cambiamos a block para permitir que el contenido fluya */
-}
-
-/* Contenedor flexible para los logos */
-#dispositivos tbody {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos bajen de línea en móviles */
-    justify-content: center;
-    gap: 30px; /* Espacio uniforme entre secciones */
-}
-
-/* Cada bloque (Android, Apple, Ordenador) se convierte en una tarjeta vertical */
-#dispositivos tbody tr, 
-#dispositivos tbody th {
-    display: flex;
-    flex-direction: column; /* Imagen arriba, texto abajo */
-    align-items: center;
-    border: none;
-    background: none;
-    /*width: 200px; * Ancho controlado de cada sección */
-    /* CAMBIO: Usamos max-width en lugar de width fijo */
-    width: 100%; 
-    max-width: 200px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-/* Ocultamos las partes de la tabla tradicional que ya no usamos */
-#dispositivos thead, 
-#dispositivos tfoot {
-    display: none; 
-}
-
-/* Estilo de los logotipos de selección */
-.logo-seleccion {
-    width: 140px; 
-    height: auto;
-    padding: 15px;
-    background-color: #fff;
-    border: 2px solid #999;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Efecto visual al interactuar */
-.logo-seleccion:hover {
-    transform: translateY(-5px); /* Pequeña elevación */
-    border-color: #333;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-/* Texto debajo de la imagen *
-.texto-seleccion {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
+footer {
+    padding: 30px 0;
     text-align: center;
-    font-family: inherit;
-    text-transform: uppercase; /* Opcional: para darle un toque más moderno *
-}*/
-
-------------
+    font-size: 14px;
+    color: #000000;
+    border-top: 1px solid #ccc;
+    margin-top: 50px;
+}
 
 /* --- REDISEÑO PÁGINA DE INICIO (index.html) --- */
 
@@ -558,44 +495,59 @@ footer {
     text-align: center;
     line-height: 1.2;
 }
-/*  * web de mantenimiento * */
-.mantenimiento {
-    margin: auto;
-	width: 50%;
-	text-align:center;
-	font-family:"Comic Sans MS", "Avenir Next", "Avenir", sans-serif;
-	font-size:15px;
+
+/* --- MEDIA QUERIES (Reglas adaptativas para móvil) --- */
+/* --- RESPONSIVIDAD: Transformar tabla en bloques verticales --- */
+@media screen and (max-width: 768px) {
+    #menuToggle {
+        top: 20px;
+        left: 20px;
+        transform: scale(0.85); /* Reducción proporcional del botón en móviles */
+    }
+    
+    .logoTitulo {
+        max-width: calc(100% - 100px); /* Ajuste de la zona segura para móviles */
+    }
+
+    #titulo {
+        font-size: 1.5rem; /* Tamaño compacto para evitar desbordamientos en pantallas pequeñas */
+    }
+
+    /* Convertimos cada elemento de la tabla en un bloque independiente */
+    table.productos, 
+    .productos thead, 
+    .productos tbody, 
+    .productos tr, 
+    .productos th, 
+    .productos td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Ocultamos los encabezados de la tabla para que no estorben en móvil */
+    .productos thead tr {
+        display: none;
+    }
+
+    .productos tr {
+        margin-bottom: 15px; /* Espacio entre cada producto */
+        border: 2px solid #999;
+    }
+
+    .productos th {
+        border-bottom: 1px dashed #d6d2d2;
+        padding: 15px;
+    }
+
+    .productos td {
+        padding: 15px;
+        background-color: #d6d2d2; /* Color diferente para distinguir precios de specs */
+    }
 }
 
-/* * * ERROR * * */
-#texto {
-	text-align:center;
-	font-family:Comic Sans MS;
-	margin: 20px;
-	padding: 5px 10px;
-	color: black;
-	font-size: 100%;
-}
-
-#texto2 {
-	text-align:center;
-	font-family:Comic Sans MS;
-	margin: 20px;
-	padding: 5px 10px;
-	color: black;
-	font-size: 100%;
-}
-
-div#seccionPrincipal { 
-    background-color:#DCDCDC;
-    margin: 0 auto;
-    padding: 25px;
-    width: fit-content;
-}
-
-div#seccionPrincipal p { 
-    background-color:#d6d2d2;
-    margin: 0 auto;
-    padding: 25px;
-    text-align: center;
+@media print {
+    .printPageButton, #menuToggle, .stt {
+        display: none !important;
+    }
 }

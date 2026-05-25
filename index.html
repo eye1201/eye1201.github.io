@@ -14,76 +14,53 @@
 	<body>
 		<div class="content">
 			<!--encabezado-->
-			<header>
-				<nav role="navigation">
-					<div id="menuToggle">
-						<!--
-						A fake / hidden checkbox is used as click reciever,
-						so you can use the :checked selector on it.
-						-->
-						<input type="checkbox" />
-						
-						<!--
-						Some spans to act as a hamburger.
-						
-						They are acting like a real hamburger,
-						not that McDonalds stuff.
-						-->
-						<span></span>
-						<span></span>
-						<span></span>
-						
-						<!--
-						Too bad the menu has to be inside of the button
-						but hey, it's pure CSS magic.
-						-->
-						<ul id="menu">
-							<a href="."><li class="active">▻ Inicio</li></a>
-							<a href="/EYEnews/content"><li>⌲ El Comparador</li></a>
-							<a href="/content"><li>⌲ Contenidos</li></a>
-							<a href="/content/Landing_NLM.html"><li>⌲ El recomendador de NLM</li></a>
-							<!--<a href="#" onclick="alert('La página a la que intentas acceder no esta disponible aún. ¡Lamentamos las molestias!');"><li>⌲ NULL</li></a>
-							<a href="#"><li></li></a>-->
-						</ul>
-					</div><br/>
-					<div class="logoTitulo">
-						<img type="png" id="imglogo" onclick="window.open('index.html', '_self')" style="display: block; margin-left: auto; margin-right: auto; width: 7%;" src="img/eyewebsLogoTransparente.png" alt="EYE webs Logo"/>
-						<p id="titulo"><b>E.Y.E.webs</b></p>
-					</div>
-				</nav>
-			</header>
+			<nav role="navigation">
+				<div id="menuToggle">
+					<!--
+					A fake / hidden checkbox is used as click reciever,
+					so you can use the :checked selector on it.
+					-->
+					<input type="checkbox" />			
+					<!--
+					Some spans to act as a hamburger.
+					They are acting like a real hamburger,
+					not that McDonalds stuff.
+					-->
+					<span></span>
+					<span></span>
+					<span></span>
+					<!--
+					Too bad the menu has to be inside of the button
+					but hey, it's pure CSS magic.
+					-->
+					<ul id="menu">
+						<a href="."><li class="active">▻ Inicio</li></a>
+						<a href="/dispositivos/"><li>⌲ El Comparador</li></a>
+						<a href="/dispositivos/Landing_NLM.html"><li>⌲ El recomendador de NLM</li></a>
+					</ul>
+				</div>
+				<div class="logoTitulo">
+					<img type="png" id="imglogo" onclick="window.open('index.html', '_self')" style="display: block; margin-left: auto; margin-right: auto; width: 7%;" src="img/eyewebsLogoTransparente.png" alt="EYE webs Logo"/>
+					<p id="titulo"><b>E.Y.E.webs</b></p>
+				</div>
+			</nav>
 			<!--fin encabezado-->
+			<br/>
 			<!--contenido de pagina de pagina-->
 			<div class="contentb">
-				<!--
-				<h1 id="titulo">INICIO</h1>
-				<p hidden class="printPageButton"><button  onclick="window.print();"> Imprimir 🖨️ página 📝 </button></p>
-				<div  id="indice">
-					<div class="summary">
-							para que esté siempre abierto, añade la etiqueta open <details open > 
-						<details >
-							<summary>
-								[Pulsa para desplegar] <br/>
-								<b style="text-decoration: underline; text-decoration-style: dotted;">Última actualización: 06/05/2026 17:51h</b> 
-							</summary>
-							<div class="detalle">
-								<p>
-									<span>La web se va actualizando lo antes posible.</span><br/>
-									<span><i>¡Disculpe las molestias!</i></span>
-								</p>
-							</div>
-						</details>
-					</div>
-				</div>
-				-->
-				<div class="productos" style="text-align: center;">
-					<p>Página principal de E.Y.E.webs</p>
+ 				<!-- texto de bienvenida -->
+				 <div class="productos" style="text-align: center;">
+					<p>Bienvenido/a a la página principal de E.Y.E.webs</p>
 				</div>
 			</div>
 			<!--fin contenido de pagina de pagina-->
 			<!--pie de pagina-->
 			<footer>
-				<p>© 2023-2026 | designed by: E.Y.E.</p>
+				<!-- Botón Imprimir integrado en el pie -->
+				<p hidden class="printPageButton">
+					<button onclick="window.print();"> Imprimir 🖨️ página 📝 </button>
+				</p>
+				<p>© 2021-2026 | diseñado por: E.Y.E.</p>
 				
 				<!-- El botón de subir suele ir al final para que cargue lo último -->
 				<a href='#' class="stt" title="Subir arriba"></a>
