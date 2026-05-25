@@ -1,18 +1,25 @@
 {
-    "short_name": "EYEwebs",
-    "name": "EYEwebs - Dispositivos de Vanguardia",
-    "description": "Los mejores dispositivos solo en EYEwebs, designed by E.Y.E.",
-    "icons": [
-      {
-        "src": "/img/eyewebsLogoFavicon.png",
-        "type": "image/png",
-        "sizes": "660x600",
-        "purpose": "any"
-      }
-    ],
-    "start_url": "./index.html",
-    "display": "standalone",
-    "theme_color": "#000000",
-    "background_color": "#ffffff",
-    "lang": "es"
-  }
+  "short_name": "EYEwebs",
+  "name": "EYEwebs - Dispositivos de Vanguardia",
+  "description": "Los mejores dispositivos solo en EYEwebs, designed by E.Y.E.",
+  "icons": [
+    {
+      "src": "/img/eyewebsLogoFavicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/eyewebsLogoFavicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/", 
+  "display": "standalone",
+  "theme_color": "#ededed", 
+  "background_color": "#ededed",
+  "lang": "es",
+  "_nota": "si el theme_color lo cambio a #000000, empezaría en negro"
+}
