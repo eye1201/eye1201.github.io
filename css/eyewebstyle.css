@@ -1,6 +1,6 @@
 /* Diseño web: E.Y.E. 
    Menu Hamburguesa basado en el diseño de Erik Terwan
-   Actualizado: 25/05/2026 07:18h
+   Actualizado: 25/05/2026 10:50h
 */
 
 * {
@@ -81,6 +81,13 @@ nav[role="navigation"] {
     margin-left: auto;
     margin-right: auto;
     transition: transform 0.3s;
+}
+
+#imglogo {
+    width: 100px; /*Tamaño fijo pero seguro */
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 .logoTitulo img:hover {
