@@ -1,6 +1,6 @@
 /* Diseño web: E.Y.E. 
    Menu Hamburguesa basado en el diseño de Erik Terwan
-   Actualizado: 25/05/2026 10:50h
+   Actualizado: 23-06-2026 23:05h
 */
 
 * {
@@ -319,7 +319,7 @@ h5.titulo-gama {
 
 /* 2. El encabezado (botón de pulsar) */
 #indice .summary {
-    background-color: #E6E6FA;
+    background-color: #e0e0e0;
     padding: 15px;
     text-align: center;
     font-size: 14px;
@@ -333,7 +333,7 @@ h5.titulo-gama {
 
 /* 3. El contenido desplegable */
 .detalle {
-    background-color: #c5c5d8;
+    background-color: #f8f9fa;
     padding: 15px;
     border-radius: 0 0 5px 5px;
     text-align: left;
