@@ -1,5 +1,26 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirigiendo</title>
-<meta http-equiv="refresh" content="0; URL=/dispositivos/Landing_NLM.html">
-<link rel="canonical" href="/dispositivos/Landing_NLM.html">
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Redirigiendo a la nueva sección de dispositivos...</title>
+  
+  <script>
+    // URL base de destino
+    const nuevaUrl = "/dispositivos/Landing_NLM";
+    
+    // Capturamos el hash actual si existe (ej. ##iPhone...)
+    const hash = window.location.hash;
+    
+    // Redirigimos inmediatamente sumando el hash. 
+    // Usamos replace() en lugar de assign() o href para no romper el botón "Atrás" del navegador.
+    window.location.replace(nuevaUrl + hash);
+  </script>
+
+  <meta http-equiv="refresh" content="0; url=/dispositivos/Landing_NLM">
+  
+  <link rel="canonical" href="/dispositivos/Landing_NLM" />
+</head>
+<body>
+  <p>Nos hemos mudado. Si no eres redirigido en un par de segundos, <a href="/dispositivos/Landing_NLM">haz clic aquí</a>.</p>
+</body>
+</html>
