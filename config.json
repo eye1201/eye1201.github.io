@@ -1,5 +1,5 @@
 {
     "mantenimientoActivo": true,
-    "fechaFin": "2026-09-16T23:15:00",
+    "fechaFin": "2026-09-16T23:45:00",
     "_nota": "El formato de fechaFin debe seguir el estándar ISO 8601 (YYYY-MM-DDTHH:MM:SS)"
   }
